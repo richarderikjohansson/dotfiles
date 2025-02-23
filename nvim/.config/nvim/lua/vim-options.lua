@@ -22,6 +22,8 @@ vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+vim.wo.relativenumber = true
 vim.wo.number = true
 vim.opt.autoread = true
-
+--vim.opt.termguicolors = true
+vim.o.background = "dark"
