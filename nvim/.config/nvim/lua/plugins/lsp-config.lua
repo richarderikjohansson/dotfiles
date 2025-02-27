@@ -37,8 +37,9 @@ return {
           pylsp = {
             plugins = {
               pyflakes = { enabled = false },
-              pycodestyle = { enabled = false },
-              autopep8 = { enabled = true },
+              pycodestyle = { enabled = true, ignore = { "E741", "E501" } },
+              autopep8 = { enabled = false },
+              pylint = { enabled = true, executable = "pylint", args = { "--disable=missing-module-docstring", "--diable=E741"} },
               yapf = { enabled = false },
               mccabe = { enabled = false },
               pylsp_mypy = { enabled = false },
@@ -46,8 +47,8 @@ return {
               pylsp_isort = { enabled = true },
             }
           }
-        }
-
+        },
+        capabilities = capabilities
       })
       lspconfig.ruff.setup({
         capabilities = capabilities

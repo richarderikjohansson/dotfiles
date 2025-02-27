@@ -14,7 +14,7 @@ return {
           percentage = 0.3, -- percentage of the shade to apply to the inactive window
         },
       })
-      vim.cmd.colorscheme "catppuccin-mocha"
+--      vim.cmd.colorscheme "catppuccin-mocha"
     end
   },
 }
