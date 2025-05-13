@@ -1,21 +1,22 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
-format = "[ric@local](teal) in $directory $character"
-right_format = "$conda$git_branch $git_status"
+format = """
+$directory $git_branch $git_status
+$python$character """
 
 # Inserts a blank line between shell prompts
 add_newline = false 
-palette = "catppuccin_mocha"
+palette = "rose-pine"
 
-[character] # The name of the module we are configuring is 'character'
-success_symbol = '[❯](green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-error_symbol = "[❯](red)"
+[character] # The name of the module we are configuring is ''
+success_symbol = "[>_](bold iris)" # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = "[>_](bold love)"
 
 [directory]
 truncation_length = 0 
 truncate_to_repo = false 
-style = "rosewater"
+style = "gold"
 format = "[$path]($style)"
 
 
@@ -26,17 +27,29 @@ disabled = true
 [python]
 # Don't trigger for files with the py extension
 detect_extensions = []
+style = "rose"
+format = "[$virtualenv]($style) "
 
 [conda]
-format = 'in [$environment](dimmed green) '
+style = "love"
+format = '([$environment]($style) )'
 ignore_base = false
 
 [git_branch]
-format = "on [$branch](mauve)"
+format = " [$branch](bold foam)"
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "love"
+format = '([$all_status$ahead_behind]($style) )'
 
+[palettes.rose-pine]
+overlay = '#26233a'
+love = '#eb6f92'
+gold = '#f6c177'
+rose = '#ebbcba'
+pine = '#31748f'
+foam = '#9ccfd8'
+iris = '#c4a7e7'
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"

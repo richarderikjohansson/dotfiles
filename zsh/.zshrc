@@ -1,5 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+#
+# functions
+#
+tmux_attach(){
+  tmux attach -d -t "$1"
+
+}
 
 
 # Path to your oh-my-zsh installation.
@@ -133,3 +140,4 @@ fi
 eval "$(starship init zsh)"
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH="$HOME/bin:$PATH"

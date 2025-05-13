@@ -1,0 +1,28 @@
+return {
+	--	"mfussenegger/nvim-lint",
+	--	config = function()
+	--		local lint = require("lint")
+	--		lint.linters_by_ft = {
+	--			python = {
+	--				"mypy",
+	--				"flake8",
+	--			},
+	--		}
+	--		local python_path = vim.fn.exepath("python")
+	--		local mypy = lint.linters.mypy
+	--		mypy.args = {
+	--			"--show-column-numbers",
+	--			"--show-error-end",
+	--			"--hide-error-context",
+	--			"--no-color-output",
+	--			"--no-error-summary",
+	--			"--no-pretty",
+	--			"--python-executable",
+	--			python_path,
+	--		}
+	--		local flake8 = lint.linters.flake8
+	--		flake8.args = {
+	--			"--ignore=E501",
+	--		}
+	--	end,
+}
